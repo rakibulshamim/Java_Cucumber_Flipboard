@@ -1,4 +1,4 @@
-# Java_Cucumber_Pararell_Multithread_And_Allure_Flipboard.com
+# Java_Cucumber_Flipboard
 
 
 
