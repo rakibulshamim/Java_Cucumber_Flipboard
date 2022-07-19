@@ -22,24 +22,13 @@ public class PostPageStepDefinition {
     }
 
     @Given("click on Share icon in home page")
-<<<<<<< HEAD
     public void click_on_share_icon_in_home_page() {
-=======
-    public void click_on_share_icon_in_home_page() throws InterruptedException {
-        Thread.sleep(5000);
->>>>>>> 45cf3f318b4de694cc7ba8465edfcea2ac7496a6
         postPage.homeShare().click();
     }
 
     @Then("click on Share icon")
     public void click_on_share_icon() throws InterruptedException {
-<<<<<<< HEAD
         postPage.setShare().click();
-=======
-        Thread.sleep(5000);
-        postPage.setShare().click();
-        Thread.sleep(3000);
->>>>>>> 45cf3f318b4de694cc7ba8465edfcea2ac7496a6
     }
 
     @When("click on Share on Facebook button")
@@ -49,32 +38,17 @@ public class PostPageStepDefinition {
     }
 
     @Then("click on Post To Facebook button")
-<<<<<<< HEAD
     public void click_on_post_to_facebook_button() {
-=======
-    public void click_on_post_to_facebook_button() throws InterruptedException {
-        Thread.sleep(5000);
->>>>>>> 45cf3f318b4de694cc7ba8465edfcea2ac7496a6
         postPage.setPost().click();
     }
 
     @When("click on Facebook login Button")
-<<<<<<< HEAD
     public void click_on_Facebook_login_Button() {
         loginPage.setFbLogin().click();
-=======
-    public void click_on_Facebook_login_Button() throws InterruptedException {
-        loginPage.setFbLogin().click();
-        Thread.sleep(5000);
->>>>>>> 45cf3f318b4de694cc7ba8465edfcea2ac7496a6
     }
 
     @When("click on share the link below box and copy the link")
     public void click_on_share_the_link_below_box_and_copy_the_link() {
-<<<<<<< HEAD
-=======
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
->>>>>>> 45cf3f318b4de694cc7ba8465edfcea2ac7496a6
         postPage.shareLink().click();
     }
 
@@ -94,12 +68,7 @@ public class PostPageStepDefinition {
     }
 
     @Given("click on Flip icon in home page")
-<<<<<<< HEAD
     public void click_on_flip_icon_in_home_page() {
-=======
-    public void click_on_flip_icon_in_home_page() throws InterruptedException {
-        Thread.sleep(7000);
->>>>>>> 45cf3f318b4de694cc7ba8465edfcea2ac7496a6
         postPage.homeFlip().click();
     }
 
@@ -129,32 +98,17 @@ public class PostPageStepDefinition {
     }
 
     @Then("click on Flip button")
-<<<<<<< HEAD
     public void click_on_flip_button() {
         postPage.commentFlip().click();
     }
 
     @Given("click on Heart icon")
     public void click_on_heart_icon() {
-=======
-    public void click_on_flip_button() throws InterruptedException {
-        postPage.commentFlip().click();
-        Thread.sleep(5000);
-    }
-
-    @Given("click on Heart icon")
-    public void click_on_heart_icon() throws InterruptedException {
-        Thread.sleep(5000);
->>>>>>> 45cf3f318b4de694cc7ba8465edfcea2ac7496a6
         postPage.react().click();
     }
 
     @Given("click on The Daily Edition button")
     public void click_on_the_daily_edition_button() throws InterruptedException {
-<<<<<<< HEAD
-=======
-        Thread.sleep(7000);
->>>>>>> 45cf3f318b4de694cc7ba8465edfcea2ac7496a6
         postPage.theDailyEditionBtn().click();
     }
 
@@ -181,11 +135,7 @@ public class PostPageStepDefinition {
     @Then("verify reported successfully")
     public void verify_reported_successfully() throws InterruptedException {
         Assert.assertEquals(postPage.reportedMessage(), "Content reported successfully.");
-<<<<<<< HEAD
         Thread.sleep(3000);
-=======
-        Thread.sleep(5000);
->>>>>>> 45cf3f318b4de694cc7ba8465edfcea2ac7496a6
     }
 
     @When("click on follow button")
