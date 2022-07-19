@@ -17,5 +17,5 @@ Feature: User Login
     And click on Facebook login button
     Then login successfully and validation of page title
     Examples:
-      |   Phone     | FbPassword  |
-      | 01647302338 | 30453@shmm  |
+      |    Phone     | FbPassword  |
+      | phone number |  password   |

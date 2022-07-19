@@ -3,6 +3,10 @@ package pages.Post;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class PostPage {
     public static WebDriver driver;
@@ -36,15 +40,23 @@ public class PostPage {
     By homeFlipIcon = By.xpath("//body/div[1]/div[1]/div[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/article[1]/footer[1]/div[1]/div[2]/button[2]/*[1]");
 
     public WebElement setShare() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.elementToBeClickable(shareBtn));
         return driver.findElement(shareBtn);
     }
     public WebElement setFacebook() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(facebookBtn));
         return driver.findElement(facebookBtn);
     }
     public WebElement setPost() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(postBtn));
         return driver.findElement(postBtn);
     }
     public WebElement shareLink() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(linkTxt));
         return driver.findElement(linkTxt);
     }
     public String messagesCopied() {
@@ -72,9 +84,13 @@ public class PostPage {
         driver.findElement(caption).sendKeys(comment);
     }
     public WebElement commentFlip() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(flipBtn));
         return driver.findElement(flipBtn);
     }
     public WebElement react() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(reactBtn));
         return driver.findElement(reactBtn);
     }
     public WebElement menu() {
@@ -99,10 +115,21 @@ public class PostPage {
         return driver.findElement(profileBtn);
     }
     public WebElement like(){return driver.findElement(likeBtn);}
-
-    public WebElement theDailyEditionBtn(){return driver.findElement(dailyEditionBtn);}
-    public WebElement homeShare(){return driver.findElement(homeShareIcon);}
-    public WebElement homeFlip(){return driver.findElement(homeFlipIcon);}
+    public WebElement theDailyEditionBtn(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(dailyEditionBtn));
+        return driver.findElement(dailyEditionBtn);
+    }
+    public WebElement homeShare(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(homeShareIcon));
+        return driver.findElement(homeShareIcon);
+    }
+    public WebElement homeFlip(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(homeFlipIcon));
+        return driver.findElement(homeFlipIcon);
+    }
     public static String getPageTitle() {
         return driver.getTitle();
     }

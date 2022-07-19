@@ -22,16 +22,13 @@ public class PostPageStepDefinition {
     }
 
     @Given("click on Share icon in home page")
-    public void click_on_share_icon_in_home_page() throws InterruptedException {
-        Thread.sleep(5000);
+    public void click_on_share_icon_in_home_page() {
         postPage.homeShare().click();
     }
 
     @Then("click on Share icon")
     public void click_on_share_icon() throws InterruptedException {
-        Thread.sleep(5000);
         postPage.setShare().click();
-        Thread.sleep(3000);
     }
 
     @When("click on Share on Facebook button")
@@ -41,20 +38,17 @@ public class PostPageStepDefinition {
     }
 
     @Then("click on Post To Facebook button")
-    public void click_on_post_to_facebook_button() throws InterruptedException {
-        Thread.sleep(5000);
+    public void click_on_post_to_facebook_button() {
         postPage.setPost().click();
     }
 
     @When("click on Facebook login Button")
-    public void click_on_Facebook_login_Button() throws InterruptedException {
+    public void click_on_Facebook_login_Button() {
         loginPage.setFbLogin().click();
-        Thread.sleep(5000);
     }
 
     @When("click on share the link below box and copy the link")
     public void click_on_share_the_link_below_box_and_copy_the_link() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         postPage.shareLink().click();
     }
 
@@ -74,8 +68,7 @@ public class PostPageStepDefinition {
     }
 
     @Given("click on Flip icon in home page")
-    public void click_on_flip_icon_in_home_page() throws InterruptedException {
-        Thread.sleep(7000);
+    public void click_on_flip_icon_in_home_page() {
         postPage.homeFlip().click();
     }
 
@@ -105,20 +98,17 @@ public class PostPageStepDefinition {
     }
 
     @Then("click on Flip button")
-    public void click_on_flip_button() throws InterruptedException {
+    public void click_on_flip_button() {
         postPage.commentFlip().click();
-        Thread.sleep(5000);
     }
 
     @Given("click on Heart icon")
-    public void click_on_heart_icon() throws InterruptedException {
-        Thread.sleep(5000);
+    public void click_on_heart_icon() {
         postPage.react().click();
     }
 
     @Given("click on The Daily Edition button")
     public void click_on_the_daily_edition_button() throws InterruptedException {
-        Thread.sleep(7000);
         postPage.theDailyEditionBtn().click();
     }
 
@@ -145,7 +135,7 @@ public class PostPageStepDefinition {
     @Then("verify reported successfully")
     public void verify_reported_successfully() throws InterruptedException {
         Assert.assertEquals(postPage.reportedMessage(), "Content reported successfully.");
-        Thread.sleep(5000);
+        Thread.sleep(3000);
     }
 
     @When("click on follow button")

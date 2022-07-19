@@ -21,14 +21,10 @@ public class SignupPageStepDefinition {
         signupPage.signup().click();
     }
     @When("user Enter {string}, {string} and {string}")
-    public void user_Enter_and(String Email, String FullName, String Password) throws InterruptedException {
-        Thread.sleep(5000);
+    public void user_Enter_and(String Email, String FullName, String Password) {
         signupPage.setEmail(Email);
-        Thread.sleep(3000);
         signupPage.setFullName(FullName);
-        Thread.sleep(3000);
         signupPage.setPassword(Password);
-        Thread.sleep(5000);
     }
     @Then("click on Continue button")
     public void click_on_continue_button() throws InterruptedException {

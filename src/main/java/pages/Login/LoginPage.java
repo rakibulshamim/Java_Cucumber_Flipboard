@@ -3,6 +3,10 @@ package pages.Login;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Set;
 
@@ -15,27 +19,33 @@ public class LoginPage {
     By loginBtn = By.xpath("(//a[@class=\"button--base internal-link\"])[1]");
     By userName = By.xpath("//*[@name=\"username\"]");
     By passWord = By.xpath("//*[@name=\"password\"]");
-    By facebookIcon = By.xpath("//*[@class='facebook-icon']");
+    By facebookIcon = By.xpath("(//div[@class='css-1lsiokx egggxyu0']/button)[1]");
     By userId = By.name("email");
     By fbPassword = By.name("pass");
     By loginBtn2 = By.xpath("//button[@type='submit']");
     By fbLoginBtn = By.name("login");
 
     public WebElement login(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
         return driver.findElement(loginBtn);
     }
-    public void setUserName(String username) throws InterruptedException {
-        Thread.sleep(5000);
+    public void setUserName(String username) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(userName));
         driver.findElement(userName).sendKeys(username);
     }
     public void setPassword(String password){
         driver.findElement(passWord).sendKeys(password);
     }
-    public WebElement setLogin() throws InterruptedException {
-        Thread.sleep(5000);
+    public WebElement setLogin() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
         return driver.findElement(loginBtn2);
     }
     public WebElement signInByFacebook() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(facebookIcon));
         return driver.findElement(facebookIcon);
     }
     public void switchWindow() throws InterruptedException {
@@ -49,12 +59,18 @@ public class LoginPage {
         }
     }
     public void setUserId(String Phone) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(userId));
         driver.findElement(userId).sendKeys(Phone);
     }
     public void setFBPassword(String FbPassword){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(fbPassword));
         driver.findElement(fbPassword).sendKeys(FbPassword);
     }
     public WebElement setFbLogin() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(fbLoginBtn));
         return driver.findElement(fbLoginBtn);
     }
     public void switchTab() {

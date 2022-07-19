@@ -19,8 +19,7 @@ public class HomePageStepDefinition {
         this.loginPage = testContextSetup.pageObjectManager.logIn();
     }
     @Given("verify For You href visible")
-    public void verify_for_you_href_visible() throws InterruptedException {
-        Thread.sleep(5000);
+    public void verify_for_you_href_visible() {
         Assert.assertEquals(homePage.forYou(), "FOR YOU");
     }
     @Given("click on The Daily Edition")
@@ -55,7 +54,6 @@ public class HomePageStepDefinition {
     }
     @Then("popup close automatically and redirect to home page")
     public void popup_close_automatically_and_redirect_to_home_page() {
-        //System.out.println(HomePage.getPageTitle());
         Assert.assertEquals("Flipboard: Your Social Magazine", HomePage.getPageTitle());
     }
 }

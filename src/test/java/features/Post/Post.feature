@@ -14,8 +14,8 @@ Feature: Like, Flip, Comment, Share and Report on Post
     And click on Facebook login Button
     Then click on Post To Facebook button
     Examples:
-      |   Phone     | FbPassword  |
-      | 01647302338 | 30453@shmm  |
+      |    Phone     | FbPassword  |
+      | phone number |  password   |
 
 
   Scenario: visit home page and copy post share link

@@ -5,8 +5,8 @@ Feature: User Registration
     When user Enter "<Email>", "<FullName>" and "<Password>"
     Then click on Continue button
     Examples:
-      |          Email         |   FullName    |     Password       |
-      | scmytest007@gmail.com  | Atikur Rahman | 78963#jdK@woplj258 |
+      |          Email         |   FullName   |     Password       |
+      | scmytest007@gmail.com  | Rahim Hasan  | 78963#jdK@woplj258 |
 
 
   Scenario Outline: user register Successfully with Facebook's valid credentials
@@ -16,5 +16,5 @@ Feature: User Registration
     And click on Facebook login button
     Then signup successfully and validation of page title
     Examples:
-      |   Phone     | FbPassword  |
-      | 01647302338 | 30453@shmm  |
+      |    Phone     | FbPassword  |
+      | phone number |  password   |
