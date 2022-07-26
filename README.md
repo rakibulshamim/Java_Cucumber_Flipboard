@@ -5,5 +5,6 @@
 ### Reports View
 These are the screenshots of **Allure** reports:
 
-![Web1](https://user-images.githubusercontent.com/36601919/174465953-67da8fe2-c692-439c-9923-73c19d57c538.PNG)
-![Web2](https://user-images.githubusercontent.com/36601919/174465964-b8231943-8d49-4d09-9dc1-13e0875527fe.PNG)
+
+![W1](https://user-images.githubusercontent.com/36601919/180983255-98d18064-3ffa-4973-aa99-f1d7101c0aa7.PNG)
+![W2](https://user-images.githubusercontent.com/36601919/180983274-92f89b36-aa47-4495-9742-40eebe6cb0b6.PNG)
